@@ -50,7 +50,7 @@ The ontology is built using **OWL (Web Ontology Language)** and is designed to b
 ## How to Use
 
 ### Access the Ontology
-The ontology is available in **OWL format** and can be downloaded from the [Releases](https://github.com/pollicy/GBVOntology) section.
+The ontology is available in **OWL format** and can be downloaded from the [Releases](https://github.com/ArthurKakande/GBV_Ontology) section.
 
 ### Explore the Ontology
 - Use tools like **[Protégé](https://protege.stanford.edu/)** or **[WebVOWL](https://service.tib.eu/webvowl/)** to visualize and explore the ontology.
@@ -105,7 +105,7 @@ Here are some example SPARQL queries to get started:
     If you use this ontology in your research or projects, please cite it as follows:
 
     ```
-    Kakande, A. (2025). Gender-Based Violence Lexicon Ontology. Retrieved from https://github.com/pollicy/GBVOntology
+    Kakande, A. (2025). Gender-Based Violence Lexicon Ontology. Retrieved from https://github.com/ArthurKakande/GBV_Ontology
     ```
     You can also cite it using the following BibTeX entry for LaTeX:
 
@@ -114,7 +114,7 @@ Here are some example SPARQL queries to get started:
         author = {Arthur Kakande},
         title = {Gender-Based Violence Lexicon Ontology},
         year = {2025},
-        howpublished = {\url{https://github.com/pollicy/GBVOntology}},
+        howpublished = {\url{https://github.com/ArthurKakande/GBV_Ontology}},
     }
     ```
 

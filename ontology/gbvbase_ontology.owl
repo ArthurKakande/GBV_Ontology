@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.gbvbase.com#"
+     xml:base="http://www.gbvbase.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.gbvbase.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gbvbase.com#enforcedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#enforcedBy">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Policy"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#EnforcementAgency"/>
+        <rdfs:comment xml:lang="en">Links a legal framework or policy ti the agency responsible for its enforcement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#hasImplication -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#hasImplication">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Implication"/>
+        <rdfs:comment xml:lang="en">Links a word to its implications</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#hasLegalFranework -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#hasLegalFranework">
+        <rdfs:comment xml:lang="en">Links a country to its legal frameworl addressing GBV.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#hasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#hasPolicy">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Country"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Policy"/>
+        <rdfs:comment xml:lang="en">Links a country or organsition to its policies addressing GBV.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#inLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#inLanguage">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Language"/>
+        <rdfs:comment xml:lang="en">Links a word to the laguage it belongs</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#isAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#isAssociatedWith">
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:comment xml:lang="en">Links a word to a form of violence its associated with</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#isFormOfViolence -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#isFormOfViolence">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#FormOfViolence"/>
+        <rdfs:comment xml:lang="en">Links a word to the type of violence it represents</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#isLocatedInContinent -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#isLocatedInContinent">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Region"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Continent"/>
+        <rdfs:comment xml:lang="en">Links a country or region to the continent it belongs</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#partOfRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#partOfRegion">
+        <rdfs:comment xml:lang="en">Links a country ti the region it belongs</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#prevalentInRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#prevalentInRegion">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Region"/>
+        <rdfs:comment xml:lang="en">Links a word to the regin where it is prevalent</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#relatedToWord -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#relatedToWord">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Policy"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:comment xml:lang="en">Links a legal framework, policy, or legal provision to a specidic word or term.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#targetsGender -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#targetsGender">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#GenderTargeted"/>
+        <rdfs:comment xml:lang="en">Links a word to the gender(s) it targets</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#usedInContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#usedInContext">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Context"/>
+        <rdfs:comment xml:lang="en">Links a word to the context in which it is used</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#usedInCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#usedInCountry">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.gbvbase.com#Country"/>
+        <rdfs:comment xml:lang="en">Links a word to the country where it is used</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gbvbase.com#languageCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#languageCode">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Language"/>
+        <rdfs:comment xml:lang="en">The ISO code for the language</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#meaning -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#meaning">
+        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Links a word to its meaning</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#obtainedFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#obtainedFrom">
+        <rdfs:comment xml:lang="en">Links a word to the source document</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#yearAdded -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#yearAdded">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Defines when the word was added to the lexicon</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#yearAmended -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#yearAmended">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The year the legal framework or policy was last amended.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gbvbase.com#yearEnacted -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#yearEnacted">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The year the legal framework or policy was enacted</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gbvbase.com#Context -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Context">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the social, cultural or situational context inwhich thw word is used. (e.g. domestic abuse)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Continent -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Continent">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a continent (e.g. Africa)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Country -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Country">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a country within a Region (e.g. Kenya)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#EnforcementAgency -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#EnforcementAgency">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the organisaton or body resposnible for enforceing the legal framework or policy. (e.g Ministry of Women Affairs)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#FormOfViolence -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#FormOfViolence">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the type or category of violence associated with the word. (e.g. Sexual Violence)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#GenderTargeted -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#GenderTargeted">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the gender(s) primarily targeted by the word or form of violence. (e.g. Women)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Implication -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Implication">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the consequences or effects of violence associated with the word. (e.g. Social stigma)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Language -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Language">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the langauge in which the word or phrase is used. (e.g. English, Swahili)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#LegalFramework -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#LegalFramework">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a law, policy, or legal document addressing GBV.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#LegalProvision -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#LegalProvision">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents specific provisions or clauses within a legal frameowkr or policy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Policy -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Policy">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a government or organisational policy aimed at preventing or addressing GBV.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Region -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Region">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a sub-region within a continent (e.g. East Africa, West Africa)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Source -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Source">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the origin or reference for the word, meaning, implication, or legal framework. (e.g. Academic research)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#SupportOrganisation -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#SupportOrganisation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents organisations providing support to victims.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gbvbase.com#Word -->
+
+    <owl:Class rdf:about="http://www.gbvbase.com#Word">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the term or phrase used in the context of gender-based violence and/or hate speech. (e.g. Slut, Slut-shaming)</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

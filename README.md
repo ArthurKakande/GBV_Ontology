@@ -2,7 +2,7 @@
 
 Welcome to the **Africa Gender-Based Violence Lexicon Ontology** repository! This ontology provides a structured and comprehensive framework for understanding and analyzing terms, concepts, support organsiations and legal frameworks related to gender-based violence (GBV). It is designed to support researchers, policymakers, activists, and developers in building knowledge graphs, applications, and tools to address GBV (or TFGBV).
 
-The preferred prefix for this ontology is **ogbv: www.gbvbase.com**
+The preferred prefix for this ontology is **https://www.africagenderdata.org/** (The ontology and its knowledge graph now share this prefix with the **[Africa Gender Data Portal](https://www.africagenderdata.org/)** - a gender disaggregated data portal maintained by [The Finder's Lab](https://github.com/TheFindersLab))
 
 ## Overview
 

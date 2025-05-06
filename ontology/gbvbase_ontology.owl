@@ -1,12 +1,65 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.gbvbase.com#"
-     xml:base="http://www.gbvbase.com"
+<rdf:RDF xmlns="https://www.africagenderdata.org/#"
+     xml:base="https://www.africagenderdata.org/#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.gbvbase.com"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf-schema="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://www.africagenderdata.org/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.africagenderdata.org/w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
+
+    <rdfs:Datatype rdf:about="https://www.africagenderdata.org/w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    
+
+
+    <!-- https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal -->
+
+    <rdfs:Datatype rdf:about="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal"/>
+    
+
+
+    <!-- https://www.africagenderdata.org/w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="https://www.africagenderdata.org/w3.org/2001/XMLSchema#integer"/>
+    
+
+
+    <!-- https://www.africagenderdata.org/w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="https://www.africagenderdata.org/w3.org/2001/XMLSchema#string"/>
     
 
 
@@ -21,137 +74,145 @@
     
 
 
-    <!-- http://www.gbvbase.com#enforcedBy -->
+    <!-- https://www.africagenderdata.org/hasSubType -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#enforcedBy">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Policy"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#EnforcementAgency"/>
-        <rdfs:comment xml:lang="en">Links a legal framework or policy ti the agency responsible for its enforcement</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/hasSubType">
+        <rdfs:comment xml:lang="en">Categorizes sub types (e.g. Abuse -&gt; Emotional)</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#hasImplication -->
+    <!-- https://www.africagenderdata.org/#enforcedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#hasImplication">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Implication"/>
-        <rdfs:comment xml:lang="en">Links a word to its implications</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#enforcedBy">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Policy"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#EnforcementAgency"/>
+        <rdf-schema:comment xml:lang="en">Links a legal framework or policy ti the agency responsible for its enforcement</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#hasLegalFranework -->
+    <!-- https://www.africagenderdata.org/#hasImplication -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#hasLegalFranework">
-        <rdfs:comment xml:lang="en">Links a country to its legal frameworl addressing GBV.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#hasImplication">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Implication"/>
+        <rdf-schema:comment xml:lang="en">Links a word to its implications</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#hasPolicy -->
+    <!-- https://www.africagenderdata.org/#hasLegalFranework -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#hasPolicy">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Country"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Policy"/>
-        <rdfs:comment xml:lang="en">Links a country or organsition to its policies addressing GBV.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#hasLegalFranework">
+        <rdf-schema:comment xml:lang="en">Links a country to its legal frameworl addressing GBV.</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#inLanguage -->
+    <!-- https://www.africagenderdata.org/#hasPolicy -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#inLanguage">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Language"/>
-        <rdfs:comment xml:lang="en">Links a word to the laguage it belongs</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#hasPolicy">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Country"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Policy"/>
+        <rdf-schema:comment xml:lang="en">Links a country or organsition to its policies addressing GBV.</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#isAssociatedWith -->
+    <!-- https://www.africagenderdata.org/#inLanguage -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#isAssociatedWith">
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:comment xml:lang="en">Links a word to a form of violence its associated with</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#inLanguage">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Language"/>
+        <rdf-schema:comment xml:lang="en">Links a word to the laguage it belongs</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#isFormOfViolence -->
+    <!-- https://www.africagenderdata.org/#isAssociatedWith -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#isFormOfViolence">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#FormOfViolence"/>
-        <rdfs:comment xml:lang="en">Links a word to the type of violence it represents</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#isAssociatedWith">
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdf-schema:comment xml:lang="en">Links a word to a form of violence its associated with</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#isLocatedInContinent -->
+    <!-- https://www.africagenderdata.org/#isFormOfViolence -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#isLocatedInContinent">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Region"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Continent"/>
-        <rdfs:comment xml:lang="en">Links a country or region to the continent it belongs</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#isFormOfViolence">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#FormOfViolence"/>
+        <rdf-schema:comment xml:lang="en">Links a word to the type of violence it represents</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#partOfRegion -->
+    <!-- https://www.africagenderdata.org/#isLocatedInContinent -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#partOfRegion">
-        <rdfs:comment xml:lang="en">Links a country ti the region it belongs</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#isLocatedInContinent">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Region"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Continent"/>
+        <rdf-schema:comment xml:lang="en">Links a country or region to the continent it belongs</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#prevalentInRegion -->
+    <!-- https://www.africagenderdata.org/#partOfRegion -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#prevalentInRegion">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Region"/>
-        <rdfs:comment xml:lang="en">Links a word to the regin where it is prevalent</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#partOfRegion">
+        <rdf-schema:comment xml:lang="en">Links a country ti the region it belongs</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#relatedToWord -->
+    <!-- https://www.africagenderdata.org/#prevalentInRegion -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#relatedToWord">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Policy"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:comment xml:lang="en">Links a legal framework, policy, or legal provision to a specidic word or term.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#prevalentInRegion">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Region"/>
+        <rdf-schema:comment xml:lang="en">Links a word to the regin where it is prevalent</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#targetsGender -->
+    <!-- https://www.africagenderdata.org/#relatedToWord -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#targetsGender">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#GenderTargeted"/>
-        <rdfs:comment xml:lang="en">Links a word to the gender(s) it targets</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#relatedToWord">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Policy"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdf-schema:comment xml:lang="en">Links a legal framework, policy, or legal provision to a specidic word or term.</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#usedInContext -->
+    <!-- https://www.africagenderdata.org/#targetsGender -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#usedInContext">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Context"/>
-        <rdfs:comment xml:lang="en">Links a word to the context in which it is used</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#targetsGender">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#GenderTargeted"/>
+        <rdf-schema:comment xml:lang="en">Links a word to the gender(s) it targets</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gbvbase.com#usedInCountry -->
+    <!-- https://www.africagenderdata.org/#usedInContext -->
 
-    <owl:ObjectProperty rdf:about="http://www.gbvbase.com#usedInCountry">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.gbvbase.com#Country"/>
-        <rdfs:comment xml:lang="en">Links a word to the country where it is used</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#usedInContext">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Context"/>
+        <rdf-schema:comment xml:lang="en">Links a word to the context in which it is used</rdf-schema:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.africagenderdata.org/#usedInCountry -->
+
+    <owl:ObjectProperty rdf:about="https://www.africagenderdata.org/#usedInCountry">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/#Country"/>
+        <rdf-schema:comment xml:lang="en">Links a word to the country where it is used</rdf-schema:comment>
     </owl:ObjectProperty>
     
 
@@ -167,56 +228,81 @@
     
 
 
-    <!-- http://www.gbvbase.com#languageCode -->
+    <!-- https://www.africagenderdata.org/hasFootnotes -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#languageCode">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Language"/>
-        <rdfs:comment xml:lang="en">The ISO code for the language</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/hasFootnotes">
+        <rdfs:comment xml:lang="en">Links definitions to citations (equivalent to hasSource)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gbvbase.com#meaning -->
+    <!-- https://www.africagenderdata.org/hasLearningResource -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#meaning">
-        <rdfs:domain rdf:resource="http://www.gbvbase.com#Word"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Links a word to its meaning</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/hasLearningResource">
+        <rdfs:comment xml:lang="en">Links a term to educational matterials (e.g. Ableism -&gt; Infrographic)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gbvbase.com#obtainedFrom -->
+    <!-- https://www.africagenderdata.org/hasSource -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#obtainedFrom">
-        <rdfs:comment xml:lang="en">Links a word to the source document</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/hasSource">
+        <owl:equivalentProperty rdf:resource="https://www.africagenderdata.org/#obtainedFrom"/>
+        <rdfs:comment xml:lang="en">Links any element to its source (Sometimes a source can be a footnote, this property is also equivalent to obtainedFrom)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gbvbase.com#yearAdded -->
+    <!-- https://www.africagenderdata.org/#languageCode -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#yearAdded">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Defines when the word was added to the lexicon</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/#languageCode">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Language"/>
+        <rdf-schema:comment xml:lang="en">The ISO code for the language</rdf-schema:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gbvbase.com#yearAmended -->
+    <!-- https://www.africagenderdata.org/#meaning -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#yearAmended">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">The year the legal framework or policy was last amended.</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/#meaning">
+        <rdfs:domain rdf:resource="https://www.africagenderdata.org/#Word"/>
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/w3.org/2001/XMLSchema#string"/>
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a word to its meaning</rdf-schema:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gbvbase.com#yearEnacted -->
+    <!-- https://www.africagenderdata.org/#obtainedFrom -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gbvbase.com#yearEnacted">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">The year the legal framework or policy was enacted</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/#obtainedFrom">
+        <rdf-schema:comment xml:lang="en">Links a word to the source document</rdf-schema:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.africagenderdata.org/#yearAdded -->
+
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/#yearAdded">
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/w3.org/2001/XMLSchema#integer"/>
+        <rdf-schema:comment xml:lang="en">Defines when the word was added to the lexicon</rdf-schema:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.africagenderdata.org/#yearAmended -->
+
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/#yearAmended">
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/w3.org/2001/XMLSchema#integer"/>
+        <rdf-schema:comment xml:lang="en">The year the legal framework or policy was last amended.</rdf-schema:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.africagenderdata.org/#yearEnacted -->
+
+    <owl:DatatypeProperty rdf:about="https://www.africagenderdata.org/#yearEnacted">
+        <rdfs:range rdf:resource="https://www.africagenderdata.org/w3.org/2001/XMLSchema#integer"/>
+        <rdf-schema:comment xml:lang="en">The year the legal framework or policy was enacted</rdf-schema:comment>
     </owl:DatatypeProperty>
     
 
@@ -232,126 +318,126 @@
     
 
 
-    <!-- http://www.gbvbase.com#Context -->
+    <!-- https://www.africagenderdata.org/#Context -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Context">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the social, cultural or situational context inwhich thw word is used. (e.g. domestic abuse)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Context">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the social, cultural or situational context inwhich thw word is used. (e.g. domestic abuse)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Continent -->
+    <!-- https://www.africagenderdata.org/#Continent -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Continent">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a continent (e.g. Africa)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Continent">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents a continent (e.g. Africa)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Country -->
+    <!-- https://www.africagenderdata.org/#Country -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Country">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a country within a Region (e.g. Kenya)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Country">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents a country within a Region (e.g. Kenya)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#EnforcementAgency -->
+    <!-- https://www.africagenderdata.org/#EnforcementAgency -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#EnforcementAgency">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the organisaton or body resposnible for enforceing the legal framework or policy. (e.g Ministry of Women Affairs)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#EnforcementAgency">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the organisaton or body resposnible for enforceing the legal framework or policy. (e.g Ministry of Women Affairs)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#FormOfViolence -->
+    <!-- https://www.africagenderdata.org/#FormOfViolence -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#FormOfViolence">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the type or category of violence associated with the word. (e.g. Sexual Violence)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#FormOfViolence">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the type or category of violence associated with the word. (e.g. Sexual Violence)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#GenderTargeted -->
+    <!-- https://www.africagenderdata.org/#GenderTargeted -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#GenderTargeted">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the gender(s) primarily targeted by the word or form of violence. (e.g. Women)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#GenderTargeted">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the gender(s) primarily targeted by the word or form of violence. (e.g. Women)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Implication -->
+    <!-- https://www.africagenderdata.org/#Implication -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Implication">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the consequences or effects of violence associated with the word. (e.g. Social stigma)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Implication">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the consequences or effects of violence associated with the word. (e.g. Social stigma)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Language -->
+    <!-- https://www.africagenderdata.org/#Language -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Language">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the langauge in which the word or phrase is used. (e.g. English, Swahili)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Language">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the langauge in which the word or phrase is used. (e.g. English, Swahili)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#LegalFramework -->
+    <!-- https://www.africagenderdata.org/#LegalFramework -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#LegalFramework">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a law, policy, or legal document addressing GBV.</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#LegalFramework">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents a law, policy, or legal document addressing GBV.</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#LegalProvision -->
+    <!-- https://www.africagenderdata.org/#LegalProvision -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#LegalProvision">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents specific provisions or clauses within a legal frameowkr or policy</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#LegalProvision">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents specific provisions or clauses within a legal frameowkr or policy</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Policy -->
+    <!-- https://www.africagenderdata.org/#Policy -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Policy">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a government or organisational policy aimed at preventing or addressing GBV.</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Policy">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents a government or organisational policy aimed at preventing or addressing GBV.</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Region -->
+    <!-- https://www.africagenderdata.org/#Region -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Region">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents a sub-region within a continent (e.g. East Africa, West Africa)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Region">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents a sub-region within a continent (e.g. East Africa, West Africa)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Source -->
+    <!-- https://www.africagenderdata.org/#Source -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Source">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the origin or reference for the word, meaning, implication, or legal framework. (e.g. Academic research)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Source">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the origin or reference for the word, meaning, implication, or legal framework. (e.g. Academic research)</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#SupportOrganisation -->
+    <!-- https://www.africagenderdata.org/#SupportOrganisation -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#SupportOrganisation">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents organisations providing support to victims.</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#SupportOrganisation">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents organisations providing support to victims.</rdf-schema:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.gbvbase.com#Word -->
+    <!-- https://www.africagenderdata.org/#Word -->
 
-    <owl:Class rdf:about="http://www.gbvbase.com#Word">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the term or phrase used in the context of gender-based violence and/or hate speech. (e.g. Slut, Slut-shaming)</rdfs:comment>
+    <owl:Class rdf:about="https://www.africagenderdata.org/#Word">
+        <rdf-schema:comment rdf:datatype="https://www.africagenderdata.org/w3.org/2000/01/rdf-schema#Literal">Represents the term or phrase used in the context of gender-based violence and/or hate speech. (e.g. Slut, Slut-shaming)</rdf-schema:comment>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
